@@ -29,9 +29,17 @@ canvas {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);
 }
 
-#scale-title {
+.sliders p {
   margin: 1px;
   position: absolute;
+}
+
+#scale-title {
   left: 180px;
   top: 10px
+}
+
+#size-title {
+  left: 180px;
+  top: 30px;
 }

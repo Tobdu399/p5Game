@@ -20,10 +20,15 @@ class Button {
         noStroke();
         rect(this.x*scale, this.y*scale, this.width*size*scale, this.height*size*scale, this.borderradius);
       }
+
+      // fill(0);
+      // ellipse(this.x*scale, 150*scale, 10*scale*size, 10*scale*size);
+      // ellipse(this.x*scale, 150+this.height*size, 10*scale*size, 10*scale*size);
     }
 
     this.click = function() {      
       if (this.isClicked == false && mouseX > this.x && mouseX < this.x+this.width && mouseY > this.y && mouseY < this.y+this.height) {
+        console.log(this.x, this.y, mouseX, mouseY.toFixed(0));
         this.isClicked = true;
         setTimeout(() => {
           this.isClicked = false;

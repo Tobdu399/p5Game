@@ -1,6 +1,11 @@
 @font-face {
   font-family: roboto;
-  src: url("Fonts/font.ttf");
+  src: url("Fonts/lightFont.ttf");
+}
+
+@font-face {
+  font-family: "roboto mono";
+  src: url("Fonts/rbLight.ttf");
 }
 
 html, body {
@@ -29,8 +34,10 @@ canvas {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);
 }
 
-.sliders p {
-  margin: 1px;
+.sliders pre {
+  font-size: 14px;
+  font-family: roboto mono;
+  margin: 0px;
   position: absolute;
 }
 

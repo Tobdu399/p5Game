@@ -1,10 +1,12 @@
+let money = 0;
+
 let width = 700,
     scale = 1,
     size = 1;
 
-let buttonAmount = 6;
+const buttonAmount = 6;
 
-let scale_slider = document.getElementById("scale-slider"),
+const scale_slider = document.getElementById("scale-slider"),
     size_slider = document.getElementById("size-slider");
 
 let boldFont,
@@ -12,7 +14,7 @@ let boldFont,
 
 function setup() {
   createCanvas(width*scale, (width/1.5)*scale);
-  frameRate(60);
+  frameRate(144);
   boldFont = loadFont("Fonts/boldFont.ttf");
   lightFont = loadFont("Fonts/lightFont.ttf");
 }
@@ -43,7 +45,6 @@ function draw() {
   textAlign(LEFT);
   textSize(16*size*scale);
   text("Money: ", 100*scale, 100*scale);
-
 
   drawButtons();
 }

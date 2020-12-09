@@ -20,22 +20,17 @@ class Button {
         noStroke();
         rect(this.x*scale, this.y*scale, this.width*size*scale, this.height*size*scale, this.borderradius);
       }
-
-      // fill(0);
-      // ellipse(this.x*scale, 150*scale, 10*scale*size, 10*scale*size);
-      // ellipse(this.x*scale, 150+this.height*size, 10*scale*size, 10*scale*size);
     }
 
-    this.click = function() {      
-      if (this.isClicked == false && mouseX > this.x && mouseX < this.x+this.width && mouseY > this.y && mouseY < this.y+this.height) {
-        console.log(this.x, this.y, mouseX, mouseY.toFixed(0));
+    this.click = function() {
+      if (this.isClicked == false && mouseX >= this.x*scale && mouseX <= (this.x+this.width*size)*scale && mouseY >= this.y*scale && mouseY <= (this.y+this.height*size)*scale) {
         this.isClicked = true;
         setTimeout(() => {
           this.isClicked = false;
+          money++;
         }, 150);
       }
     }
-
   }
 }
 
@@ -52,6 +47,7 @@ function drawButtons() {
         row1_buttons.push(button1);
       else if (row2_buttons.length <= buttonAmount)
         row2_buttons.push(button2);
+
     }
   } else {
     for (let j=0; j<row1_buttons.length; j++)
@@ -62,8 +58,10 @@ function drawButtons() {
 }
 
 function mouseClicked() {
+
   for (let j=0; j<row1_buttons.length; j++)
-      row1_buttons[j].click();
-    for (let k=0; k<row2_buttons.length; k++)
-      row2_buttons[k].click();
+    row1_buttons[j].click();
+  for (let k=0; k<row2_buttons.length; k++)
+    row2_buttons[k].click();
+
 }

@@ -25,6 +25,10 @@ body {
   align-items: center;
 
   font-family: roboto;
+
+  /* Background */
+  background-image: url("Images/background.png");
+  fill: auto;
 }
 
 canvas {
@@ -42,12 +46,20 @@ canvas {
   border-radius: 5px;  
   background: #c2c2c2;
   outline: none;
-  opacity: 0.7;
   -webkit-transition: .2s;
-  transition: opacity .2s;
+  transition: .2s;
+}
+
+.sliders input::-webkit-slider-thumb:hover {
+  background:  #327034;
+}
+
+.sliders input::-moz-range-thumb:hover {
+  background:  #327034;
 }
 
 .sliders input::-webkit-slider-thumb {
+  border: none;
   -webkit-appearance: none;
   appearance: none;
   width: 7px;
@@ -55,14 +67,19 @@ canvas {
   border-radius: 5%; 
   background: #4CAF50;
   cursor: pointer;
+  transition: .2s;
 }
 
 .sliders input::-moz-range-thumb {
-  width: 10px;
-  height: 20px;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 7px;
+  height: 17px;
   border-radius: 5%;
   background: #4CAF50;
   cursor: pointer;
+  transition: .2s;
 }
 
 .sliders pre {

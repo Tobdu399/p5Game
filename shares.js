@@ -1,14 +1,16 @@
 let row1_buttons = [];
 let row2_buttons = [];
 
-class Button {
-  constructor(x, y, width, height, borderradius) {
-    this.x = x;
-    this.y = y;
-    this.width = width;
+class Share {
+  constructor(name, profit, x, y, width, height, borderradius) {
+    this.name   = name;
+    this.porfit = profit;
+    this.x      = x;
+    this.y      = y;
+    this.width  = width;
     this.height = height;
     this.borderradius = borderradius;
-    this.isClicked = false;
+    this.isClicked    = false;
 
     this.show = function() {
       fill(255);
@@ -20,6 +22,19 @@ class Button {
         noStroke();
         rect(this.x*scale, this.y*scale, this.width*size*scale, this.height*size*scale, this.borderradius);
       }
+
+      this.info();
+    }
+
+    this.info = function() {
+      fill(0);
+      textFont(lightFont);
+      textAlign(CENTER);
+      textSize(13*size*scale);
+      text(this.name, (this.x*scale)+this.width/2*size*scale, (this.y*scale+20*size));
+
+      textFont("Georgia")
+      text("Profit " + this.porfit + "$", this.x*scale+(this.width/2*size*scale), this.y*scale+(this.height*size)*scale-10);
     }
 
     this.click = function() {
@@ -27,7 +42,7 @@ class Button {
         this.isClicked = true;
         setTimeout(() => {
           this.isClicked = false;
-          money++;
+          // money++;
         }, 150);
       }
     }
@@ -38,14 +53,14 @@ function drawButtons() {
   fill(255);
   noStroke();
 
-  if (row1_buttons.length <= buttonAmount || row2_buttons.length <= buttonAmount) {
-    for (let i=1; i<buttonAmount; i++) {
-      const button1 = new Button(102*i, 150, 90, 120, 5);
-      const button2 = new Button(102*i, 285, 90, 120, 5)
+  if (row1_buttons.length <= sharesAmount || row2_buttons.length <= sharesAmount) {
+    for (let i=1; i<sharesAmount+1; i++) {
+      const button1 = new Share("Name", 0, 102*i, 150, 90, 120, 5);
+      const button2 = new Share("Name", 0, 102*i, 285, 90, 120, 5)
 
-      if (row1_buttons.length <= buttonAmount)
+      if (row1_buttons.length <= sharesAmount)
         row1_buttons.push(button1);
-      else if (row2_buttons.length <= buttonAmount)
+      else if (row2_buttons.length <= sharesAmount)
         row2_buttons.push(button2);
 
     }

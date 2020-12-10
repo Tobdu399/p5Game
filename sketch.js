@@ -4,7 +4,7 @@ let width = 700,
     scale = 1,
     size = 1;
 
-const buttonAmount = 6;
+const sharesAmount = 5;
 
 const scale_slider = document.getElementById("scale-slider"),
     size_slider = document.getElementById("size-slider");
@@ -33,18 +33,24 @@ function draw() {
   // --> Game Loop
   // Title
   fill(0);
-  textFont(boldFont);
+  textFont("Helvetica");
   textAlign(CENTER);
-  textStyle(BOLD);
-  textSize(20*size*scale);
-  text("Game", width/2*scale, 50*scale);
+  textSize(22*size*scale);
+  text("Stocks and Shares", width/2*scale, 50*scale);
 
   // Balance
   fill(0);
-  textFont(lightFont);
+  textFont("Georgia");
   textAlign(LEFT);
   textSize(16*size*scale);
-  text("Money: ", 100*scale, 100*scale);
+  text("Money: " + money + "$", 102*scale, 100*scale);
+
+  // Shop
+  fill(0);
+  textFont("Georgia");
+  textAlign(RIGHT);
+  textSize(16*size*scale);
+  text("Shop", width*scale-102*scale, 100*scale);
 
   drawButtons();
 }

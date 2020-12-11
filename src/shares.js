@@ -30,11 +30,12 @@ class Share {
       fill(0);
       textFont(lightFont);
       textAlign(CENTER);
-      textSize(13*size*scale);
-      text(this.name, (this.x*scale)+this.width/2*size*scale, (this.y*scale+20*size));
+      textSize(15*size*scale);
+      text(this.name, (this.x*scale)+this.width/2*size*scale, this.y*scale+(20*size)*scale);
 
+      textSize(12*size*scale);
       textFont("Georgia")
-      text("Profit " + this.porfit + "$", this.x*scale+(this.width/2*size*scale), this.y*scale+(this.height*size)*scale-10);
+      text("Prft " + this.porfit + "$", this.x*scale+(this.width/2*size*scale), this.y*scale+((this.height-10)*size)*scale);
     }
 
     this.click = function() {

@@ -1,11 +1,11 @@
 @font-face {
   font-family: roboto;
-  src: url("Fonts/lightFont.ttf");
+  src: url("lightFont.ttf");
 }
 
 @font-face {
   font-family: "roboto mono";
-  src: url("Fonts/rbLight.ttf");
+  src: url("rbLight.ttf");
 }
 
 html, body {
@@ -27,12 +27,12 @@ body {
   font-family: roboto;
 
   /* Background */
-  background-image: url("Images/background.png");
+  background-image: url("../images/background.png");
   fill: auto;
 }
 
 canvas {
-  margin:auto;
+  margin: auto;
   border-radius: 5px;
 
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);

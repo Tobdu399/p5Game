@@ -1,25 +1,4 @@
-let money = 0;
-
-let width = 700,
-    scale = 1,
-    size = 1;
-
-const sharesAmount = 5;
-
-const scale_slider = document.getElementById("scale-slider"),
-    size_slider = document.getElementById("size-slider");
-
-let boldFont,
-    lightFont;
-
-function setup() {
-  createCanvas(width*scale, (width/1.5)*scale);
-  frameRate(144);
-  boldFont = loadFont("Fonts/boldFont.ttf");
-  lightFont = loadFont("Fonts/lightFont.ttf");
-}
-
-function draw() {
+function updateCanvas() {
   // Using type coercion to be able to format the value to 2 decimals
   scale = scale_slider.value*1;
   document.getElementById("scale-title").innerHTML = "Scale: " + (scale*100).toFixed(0) + "%";
@@ -29,8 +8,9 @@ function draw() {
 
   resizeCanvas(width*scale, (width/1.5)*scale)
   background(220);
+}
 
-  // --> Game Loop
+function showHeaders() {
   // Title
   fill(0);
   textFont("Helvetica");
@@ -46,11 +26,19 @@ function draw() {
   text("Money: " + money + "$", 102*scale, 100*scale);
 
   // Shop
+  // const shopLink = new Link("Shop", width*scale-102*scale, 100*scale, "Georgia", 16, "right");
+  // shopLink.showLink();
   fill(0);
   textFont("Georgia");
   textAlign(RIGHT);
   textSize(16*size*scale);
   text("Shop", width*scale-102*scale, 100*scale);
 
-  drawButtons();
+  if (mouseX > (width*scale-102*scale)-35*scale*size && mouseX < width*scale-102*scale &&
+      mouseY > (100-15*scale) && mouseY < 102*scale) {
+    cursor('pointer');
+  } else {
+    cursor('default');
+  }
+
 }

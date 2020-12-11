@@ -43,7 +43,7 @@ class Share {
         this.isClicked = true;
         setTimeout(() => {
           this.isClicked = false;
-          // money++;
+          money++;
         }, 150);
       }
     }
@@ -54,14 +54,14 @@ function drawButtons() {
   fill(255);
   noStroke();
 
-  if (row1_buttons.length <= sharesAmount || row2_buttons.length <= sharesAmount) {
+  if (row1_buttons.length < sharesAmount || row2_buttons.length < sharesAmount) {
     for (let i=1; i<sharesAmount+1; i++) {
-      const button1 = new Share("Name", 0, 102*i, 150, 90, 120, 5);
-      const button2 = new Share("Name", 0, 102*i, 285, 90, 120, 5)
+      const button1 = new Share("Stocks", 1, 102*i, 150, 90, 120, 5);
+      const button2 = new Share("Shares", 1, 102*i, 285, 90, 120, 5)
 
-      if (row1_buttons.length <= sharesAmount)
+      if (row1_buttons.length < sharesAmount)
         row1_buttons.push(button1);
-      else if (row2_buttons.length <= sharesAmount)
+      if (row2_buttons.length < sharesAmount)
         row2_buttons.push(button2);
 
     }

@@ -26,19 +26,11 @@ function showHeaders() {
   text("Money: " + money + "$", 102*scale, 100*scale);
 
   // Shop
-  // const shopLink = new Link("Shop", width*scale-102*scale, 100*scale, "Georgia", 16, "right");
-  // shopLink.showLink();
+  const shopLink = new Link("Shop", width*scale-102*scale, 100*scale, "Georgia", 16, "right");
+  shopLink.showLink();
   fill(0);
   textFont("Georgia");
   textAlign(RIGHT);
   textSize(16*size*scale);
   text("Shop", width*scale-102*scale, 100*scale);
-
-  if (mouseX > (width*scale-102*scale)-35*scale*size && mouseX < width*scale-102*scale &&
-      mouseY > (100-15*scale) && mouseY < 102*scale) {
-    cursor('pointer');
-  } else {
-    cursor('default');
-  }
-
 }

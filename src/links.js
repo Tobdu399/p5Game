@@ -12,7 +12,13 @@ class Link {
       textFont(this.font);
       textSize(fontsize*size*scale);
       textAlign(this.align);
-      text(this.text, this.x, this.y);
+      // text(this.text, this.x, this.y);
+
+      if (mouseX > this.x-(this.text.length*8.75)*scale*size && mouseX < this.x && mouseY > (y-fontsize*scale) && mouseY < y*scale) {
+        cursor("pointer");
+      } else {
+        cursor("default");
+      }
     }
   }
 }

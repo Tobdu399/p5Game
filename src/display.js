@@ -7,6 +7,7 @@ function updateCanvas() {
   document.getElementById("size-title").innerHTML = "Size:  " + (size*100).toFixed(0) + "%";
 
   resizeCanvas(width*scale, (width/1.5)*scale)
+  canvas.position(windowWidth/2-(width/2)*scale, windowHeight/2-height/2);
   background(220);
 }
 
@@ -26,11 +27,5 @@ function showHeaders() {
   text("Money: " + money + "$", 102*scale, 100*scale);
 
   // Shop
-  const shopLink = new Link("Shop", width*scale-102*scale, 100*scale, "Georgia", 16, "right");
-  shopLink.showLink();
-  fill(0);
-  textFont("Georgia");
-  textAlign(RIGHT);
-  textSize(16*size*scale);
-  text("Shop", width*scale-102*scale, 100*scale);
+  link.show();
 }

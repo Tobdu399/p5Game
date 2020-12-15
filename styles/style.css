@@ -13,16 +13,13 @@ html, body {
 }
 
 body {
+  position: relative;
   margin:0;
   padding:0;
   overflow: hidden;
-  display: flex;
 
   background-color: #BEF3E4;
   background-size: auto;
-
-  justify-content: center;
-  align-items: center;
 
   font-family: roboto;
 
@@ -36,6 +33,16 @@ canvas {
   border-radius: 5px;
 
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);
+}
+
+.sliders {
+  position: fixed;
+  z-index: 2;
+}
+
+.display {
+  position: fixed;
+  z-index: 1;
 }
 
 .sliders input {

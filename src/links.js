@@ -1,24 +1,23 @@
 class Link {
-  constructor(text, x, y, font, fontsize, align) {
-    this.text = text;
+  constructor(image, x, y, button_width, button_height, fontsize) {
+    this.image = image;
     this.x = x;
     this.y = y;
-    this.font = font;
+    this.width = button_width;
+    this.height = button_height;
     this.fontsize = fontsize;
-    this.align = align;
+    this.link = createImg(this.image);
 
-    this.showLink = function () {
-      fill(0);
-      textFont(this.font);
-      textSize(fontsize*size*scale);
-      textAlign(this.align);
-      // text(this.text, this.x, this.y);
+    this.show = function() {
+      this.link.parent("display");
+      this.link.size(this.width*scale, this.height*scale);
+      this.link.style("font-size", this.fontsize*size*scale + "px");
+      this.link.position((windowWidth/2-(width/2)*scale + this.x*scale),  (windowHeight/2-height/2 + this.y*scale));
+      this.link.mousePressed(this.click);
+    }
 
-      if (mouseX > this.x-(this.text.length*8.75)*scale*size && mouseX < this.x && mouseY > (y-fontsize*scale) && mouseY < y*scale) {
-        cursor("pointer");
-      } else {
-        cursor("default");
-      }
+    this.click = function() {
+      alert("Under developement");
     }
   }
 }

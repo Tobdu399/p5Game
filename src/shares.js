@@ -41,6 +41,7 @@ class Share {
     this.click = function() {
       if (this.isClicked == false && mouseX >= this.x*scale && mouseX <= (this.x+this.width*size)*scale && mouseY >= this.y*scale && mouseY <= (this.y+this.height*size)*scale) {
         this.isClicked = true;
+
         setTimeout(() => {
           this.isClicked = false;
           money++;

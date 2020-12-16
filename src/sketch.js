@@ -3,13 +3,13 @@ function setup() {
   canvas.parent("display");
 
   frameRate(60);
-  boldFont = loadFont("styles/boldFont.ttf");
-  lightFont = loadFont("styles/lightFont.ttf");
+  boldFont = loadFont("fonts/boldFont.ttf");
+  lightFont = loadFont("fonts/lightFont.ttf");
 
   // shopLink = createButton("Shop");
   // shopLink.parent("display");
   // shopLink.position(0, 100*scale)
-  link = new Link(shopImg, width-80, 30, 25, 25, 14);
+  link = new Link(shopImg, width-80, 30, 25, 25);
 }
 
 function draw() {

@@ -1,11 +1,11 @@
 @font-face {
   font-family: roboto;
-  src: url("lightFont.ttf");
+  src: url("../fonts/lightFont.ttf");
 }
 
 @font-face {
   font-family: "roboto mono";
-  src: url("rbLight.ttf");
+  src: url("../fonts/rbLight.ttf");
 }
 
 html, body {
@@ -36,6 +36,30 @@ canvas {
 }
 
 .sliders {
+  display: block;
+  position: fixed;
+  z-index: 2;
+}
+
+.hide-sliders pre {
+  margin: 0px;
+  font-size: 14px;
+  font-family: "roboto mono";
+  position: absolute;
+}
+
+#hide-title {
+  left: 180px;
+  top: 12px;
+}
+
+.hide-sliders img {
+  width: 30px;
+  margin-top: 5px;
+  margin-left: 15px;
+
+  cursor: pointer;
+
   position: fixed;
   z-index: 2;
 }
@@ -46,7 +70,7 @@ canvas {
 }
 
 .sliders input {
-  margin: 7px;
+  margin-top: 30px;
   -webkit-appearance: none;
   width: 100%;
   height: 7px;
@@ -98,10 +122,10 @@ canvas {
 
 #scale-title {
   left: 180px;
-  top: 10px
+  top: 33px
 }
 
 #size-title {
   left: 180px;
-  top: 30px;
+  top: 53px;
 }

@@ -1,6 +1,3 @@
-let row1_buttons = [];
-let row2_buttons = [];
-
 class Share {
   constructor(name, profit, x, y, width, height, borderradius) {
     this.name   = name;

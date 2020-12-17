@@ -68,13 +68,19 @@ canvas {
 
   width: 30px;
   margin-top: 5px;
-  margin-left: 15px;
+  margin-left: 12px;
 
   opacity: 1;
   cursor: pointer;
 
   position: fixed;
   z-index: 2;
+
+  transition: 0.1s ease-in-out;
+}
+
+.hide-sliders img:active {
+  padding-left: 5px;
 }
 
 .display {

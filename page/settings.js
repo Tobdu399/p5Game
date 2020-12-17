@@ -1,4 +1,5 @@
-// TODO: hide/show sliders when the eye is pressed
+let opcatiy = 1;
+
 function hideSliders() {
   const sliders = document.getElementById("sliders");
   const btnImage = document.getElementById("hide-image");
@@ -13,4 +14,12 @@ function hideSliders() {
     btnImage.src = "Images/show.png";
     btnImage.style.opacity = "1";
   }
+}
+
+function fadeOut() {
+  return "Under developement";
+}
+
+function fadeIn() {
+  return "Under developement";
 }

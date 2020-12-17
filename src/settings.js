@@ -9,6 +9,8 @@ let link;
 let canvas;
 
 const sharesAmount = 5;
+let row1_buttons = [];
+let row2_buttons = [];
 
 const scale_slider = document.getElementById("scale-slider"),
       size_slider = document.getElementById("size-slider");

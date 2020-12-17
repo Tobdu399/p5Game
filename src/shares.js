@@ -74,7 +74,7 @@ function drawButtons() {
   }
 }
 
-function mouseClicked() {
+function mousePressed() {
 
   for (let j=0; j<row1_buttons.length; j++)
     row1_buttons[j].click();

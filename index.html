@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="page/style.css">
     <script src="libraries/p5.min.js"></script>
@@ -12,16 +12,16 @@
   </head>
 
   <body>
-    <div class="sliders">
+    <div class="sliders" id="sliders" style="display: block;">
       <pre id="scale-title">Scale</pre>
       <input id="scale-slider" type="range" min="0.5" max="1.5" value="1.0" step="0.01" style="position: absolute; left: 10px; top: 10px; width: 150px;">
       <pre id="size-title">Size</pre>
       <input id="size-slider" type="range" min="0.5" max="1.1" value="1.0" step="0.01" style="position: absolute; left: 10px; top: 30px; width: 150px;">
     </div>
 
-    <div class="hide-sliders">
+    <div class="hide-sliders" onclick="hideSliders()">
       <pre id="hide-title">Hide/Show</pre>
-      <img id="hide-image" src="Images/hide.png">
+      <img id="hide-image" src="Images/show.png">
     </div>
 
     <div id="display"></div>

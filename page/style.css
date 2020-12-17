@@ -8,6 +8,15 @@
   src: url("../fonts/rbLight.ttf");
 }
 
+* {
+  /* Use always the default cursor,
+    unless otherwise instructed */
+  cursor: default;
+
+  /* Disable text selection highlighting */
+  user-select: none;
+}
+
 html, body {
   height: 100%;
 }
@@ -36,7 +45,6 @@ canvas {
 }
 
 .sliders {
-  display: block;
   position: fixed;
   z-index: 2;
 }
@@ -45,7 +53,8 @@ canvas {
   margin: 0px;
   font-size: 14px;
   font-family: "roboto mono";
-  position: absolute;
+  position: fixed;
+  z-index: 3;
 }
 
 #hide-title {
@@ -54,10 +63,14 @@ canvas {
 }
 
 .hide-sliders img {
+  /* Removing tap highlighting on mobile devices */
+  -webkit-tap-highlight-color: transparent;
+
   width: 30px;
   margin-top: 5px;
   margin-left: 15px;
 
+  opacity: 1;
   cursor: pointer;
 
   position: fixed;

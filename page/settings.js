@@ -7,11 +7,11 @@ function hideSliders() {
 
   if (sliders.style.display === "block") {
     sliders.style.display = btnTitle.style.display = "none";
-    btnImage.src = "Images/hide.png";
+    btnImage.src = "images/hide.png";
     btnImage.style.opacity = "0.3";
   } else {
     sliders.style.display = btnTitle.style.display = "block";
-    btnImage.src = "Images/show.png";
+    btnImage.src = "images/show.png";
     btnImage.style.opacity = "1";
   }
 }

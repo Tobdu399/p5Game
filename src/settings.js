@@ -15,7 +15,7 @@ let row2_buttons = [];
 const scale_slider = document.getElementById("scale-slider"),
       size_slider = document.getElementById("size-slider");
   
-const shopImg = "Images/shop.png";
+const shopImg = "images/shop.png";
 
 let normalCursor;
 

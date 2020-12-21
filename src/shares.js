@@ -53,14 +53,15 @@ function drawButtons() {
   noStroke();
 
   if (row1_buttons.length < sharesAmount || row2_buttons.length < sharesAmount) {
+    row1_buttons = row2_buttons = [];
+    
     for (let i=1; i<sharesAmount+1; i++) {
+
       const button1 = new Share("Stocks", 1, 102*i, 150, 90, 120, 5);
       const button2 = new Share("Shares", 1, 102*i, 285, 90, 120, 5)
 
-      if (row1_buttons.length < sharesAmount)
-        row1_buttons.push(button1);
-      if (row2_buttons.length < sharesAmount)
-        row2_buttons.push(button2);
+      row1_buttons.push(button1);
+      row2_buttons.push(button2);
 
     }
   } else {

@@ -11,6 +11,10 @@ class Link {
       this.link.parent("display");
       this.link.size(this.width*scale, this.height*scale);
       this.link.position((windowWidth/2-(width/2)*scale + this.x*scale),  (windowHeight/2-height/2 + this.y*scale));
+
+      this.link.mousePressed(() => {
+        console.log(this.x, this.y, this.width, this.height);
+      });
     }
   }
 }
